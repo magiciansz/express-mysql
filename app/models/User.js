@@ -62,6 +62,7 @@ const User = sequelize.define(
   },
   {
     tableName: "UserTbl",
+    timestamps: false,
     defaultScope: {
       attributes: {
         exclude: ["password"],

@@ -24,6 +24,8 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(express.json()); // Add this middleware to parse JSON data
 app.use(webRoutes);
+app.use(passport.initialize());
+passport.use("jwt", jwtStrategy);
 
 const errorHandler = (error, req, res, next) => {
   error.statusCode = error.statusCode || 500;

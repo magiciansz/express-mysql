@@ -1,5 +1,5 @@
 // const ApiError = require("../utils/ApiError");
-const catchAsync = require("../helpers/catchAsync");
+const catchAsync = require("../middlewares/catchAsync");
 const userService = require("../services/UserService");
 const httpStatus = require("http-status");
 
